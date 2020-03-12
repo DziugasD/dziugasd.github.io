@@ -18,7 +18,7 @@ body {
   font-family: arial, sans-serif;
   height: 100px;
   display: grid;
-  grid-template-rows: auto auto;
+  grid-template-rows: 0% auto;
   grid-template-columns: 90% auto;
   grid-template-areas:
     ". Label"
@@ -48,7 +48,7 @@ label {
   border-radius: 100px;
   position: relative;
   grid-area: Switch;
-  margin-top: 10px;
+  margin-top: 50px;
   justify-self: center;
 }
 
@@ -79,18 +79,19 @@ label:active:after {
 
 #logo {
   width: 100px;
-  height: 82px;
+  height: 100px;
   display: inline-block;
-  margin: 9px;
   grid-area: logo;
 }
+
 #redline {
   background-image: linear-gradient(90deg, #3494e6, #ec6ead);
   max-height: 3px;
   color: var(--BColor);
-  font-size: 0.0001px;
-  position: sticky;
+  font-size: 1px;
   text-indent: -9999px;
+  position: sticky;
+  top: 0;
 }
 
 #Browse ul {
@@ -99,6 +100,7 @@ label:active:after {
   padding: 0;
   overflow: hidden;
   background-color: var(--ContentBColor);
+  top: 0;
 }
 #Browse li {
   float: left;
@@ -139,13 +141,40 @@ label:active:after {
 #link:active {
   text-decoration: underline;
 }
-#main {
+#Content {
   color: var(--TColor);
   font-family: sans-serif;
   font-size: 15px;
   background-color: var(--ContentBColor);
   margin-top: 10px;
   overflow: auto;
+  display: grid;
+  grid-template-areas:
+    ". LeninID"
+    "StalinImg StalinID"
+    ". ComradeID";
+  grid-template-columns: repeat(auto-fit, minmax(300px));
+  grid-gap: 20px;
+}
+#LeninID {
+  grid-area: LeninID;
+  align-self: center;
+}
+#StalinImg {
+  grid-area: StalinImg;
+  width: auto;
+  height: 100%;
+  max-height: 200px;
+  justify-self: center;
+  align-self: center;
+}
+#StalinID {
+  grid-area: StalinID;
+  align-self: center;
+}
+#ComradeID {
+  grid-area: ComradeID;
+  align-self: center;
 }
 html.transition,
 html.transition *,
