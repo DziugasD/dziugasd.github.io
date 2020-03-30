@@ -19,7 +19,7 @@ body {
   height: 100px;
   display: grid;
   grid-template-rows: 0% auto;
-  grid-template-columns: 90% auto;
+  grid-template-columns: auto 10%;
   grid-template-areas:
     ". Label"
     "logo Switch";
@@ -32,6 +32,7 @@ h1 {
   grid-area: Label;
   justify-self: center;
   text-indent: 10px;
+  white-space: nowrap;
 }
 input[type="checkbox"] {
   height: 0;
@@ -152,9 +153,9 @@ label:active:after {
   grid-template-areas:
     ". LeninID"
     "StalinImg StalinID"
-    ". ComradeID";
-  grid-template-columns: repeat(auto-fit, minmax(300px));
+    " . ComradeID";
   grid-gap: 20px;
+  grid-template-rows: 200px 200px;
 }
 #LeninID {
   grid-area: LeninID;
@@ -163,8 +164,7 @@ label:active:after {
 #StalinImg {
   grid-area: StalinImg;
   width: auto;
-  height: 100%;
-  max-height: 200px;
+  height: 200px;
   justify-self: center;
   align-self: center;
 }
