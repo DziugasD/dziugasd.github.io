@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" type="image/png" href="/source/Untitled.png"/>
+<html>
+  <head>
+    <link href="./index.css" rel="stylesheet" type="text/css" />
+
+  </head>
+
+  <body>
+    <div id="header">
+      <img
+        src="source/Untitled.png"
+        alt="logo"
+        id="logo"
+        href="index.html"
+      />
+    
+        <h1>Dark mode</h1>
+        <input type="checkbox" id="switch" name="theme" /><label for="switch">
+      </div>
+    
+    <script>
+      var checkbox = document.querySelector("input[name=theme]");
+
+      checkbox.addEventListener("change", function() {
+        if (this.checked) {
+          trans();
+          document.documentElement.setAttribute("data-theme", "dark");
+        } else {
+          trans();
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      });
+
+      let trans = () => {
+        document.documentElement.classList.add("transition");
+        window.setTimeout(() => {
+          document.documentElement.classList.remove("transition");
+        }, 100);
+      };
+    </script>
+    <div id="Browse" position="sticky">
+      <ul>
+        <li><a href="Second.html" id="link">lenin</a></li>
+        <li><a href="Main.html" id="link">Stalin</a></li>
+        <li><a href="Main.html" id="link">Comrades</a></li>
+      </ul>
+        <div id="redline">
+          <p>.<p>        
+          </div>
+    <div id="main">
+      <div id="Content">
+        <p>
+
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut corrupti et minus provident tempora perferendis rerum facere unde nam beatae, atque deserunt impedit officiis, cum repellat obcaecati possimus mollitia distinctio
+        </p>
+        <p id="StalinID"> 
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quasi pariatur ut aliquam vel eveniet eos consequuntur qui veritatis minima sequi hic distinctio culpa commodi, illum atque, non fugit amet!
+        </p>
+
+        <img src="source/gettyimages-2637237.jpg" id="StalinImg"><img>
+        <p id="ComradeID">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi accusantium harum placeat earum voluptates obcaecati facilis reiciendis quod quisquam eaque itaque a, veniam impedit voluptatem dolorem, maxime quidem nesciunt! A.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

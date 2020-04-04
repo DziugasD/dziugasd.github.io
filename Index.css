@@ -1,0 +1,185 @@
+html[data-theme="light"] {
+  --BColor: #f9f9f9;
+  --ContentBColor: #ffffff;
+  --TColor: #000000;
+}
+html[data-theme="dark"] {
+  --BColor: #121212;
+  --ContentBColor: #272727;
+  --TColor: #ffffff;
+}
+body {
+  background-color: var(--BColor);
+}
+#header {
+  background-color: var(--ContentBColor);
+  text-align: center;
+  color: var(--TColor);
+  font-family: arial, sans-serif;
+  height: 100px;
+  display: grid;
+  grid-template-rows: 0% auto;
+  grid-template-columns: auto 10%;
+  grid-template-areas:
+    ". Label"
+    "logo Switch";
+}
+h1 {
+  font-family: arial;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-right: 10px;
+  grid-area: Label;
+  justify-self: center;
+  text-indent: 10px;
+  white-space: nowrap;
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 50px;
+  height: 25px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  grid-area: Switch;
+  margin-top: 50px;
+  justify-self: center;
+}
+
+label:after {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 45%;
+  height: 90%;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background-image: linear-gradient(90deg, #3494e6, #ec6ead);
+}
+
+input:checked + label:after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 65%;
+}
+
+#logo {
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  grid-area: logo;
+}
+
+#redline {
+  background-image: linear-gradient(90deg, #3494e6, #ec6ead);
+  max-height: 3px;
+  color: var(--BColor);
+  font-size: 1px;
+  text-indent: -9999px;
+  position: sticky;
+  top: 0;
+}
+
+#Browse ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: var(--ContentBColor);
+  top: 0;
+}
+#Browse li {
+  float: left;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+#Browse li a {
+  display: block;
+  background-color: var(--ContentBColor);
+  padding: 8px 20px;
+  text-decoration: none;
+  text-align: center;
+  color: var(--TColor);
+  font-family: inherit;
+  font-weight: bold;
+}
+#Browse li a:hover {
+  background-color: slategrey;
+}
+#Content {
+  float: right;
+  padding: 5px;
+}
+#link {
+  text-transform: capitalize;
+  color: black;
+  text-align: center;
+}
+#link:link {
+  text-decoration: none;
+}
+#link:visited {
+  text-decoration: none;
+}
+#link:hover {
+  text-decoration: underline;
+}
+#link:active {
+  text-decoration: underline;
+}
+#Content {
+  color: var(--TColor);
+  font-family: sans-serif;
+  font-size: 15px;
+  background-color: var(--ContentBColor);
+  margin-top: 10px;
+  overflow: auto;
+  display: grid;
+  grid-template-areas:
+    ". LeninID"
+    "StalinImg StalinID"
+    " . ComradeID";
+  grid-gap: 20px;
+  grid-template-rows: 200px 200px;
+}
+#LeninID {
+  grid-area: LeninID;
+  align-self: center;
+}
+#StalinImg {
+  grid-area: StalinImg;
+  width: auto;
+  height: 200px;
+  justify-self: center;
+  align-self: center;
+}
+#StalinID {
+  grid-area: StalinID;
+  align-self: center;
+}
+#ComradeID {
+  grid-area: ComradeID;
+  align-self: center;
+}
+html.transition,
+html.transition *,
+html.transition *:before,
+html.transition *:after {
+  transition: all 200ms !important;
+  transition-delay: 0 !important;
+}
