@@ -148,32 +148,33 @@ label:active:after {
   font-size: 15px;
   background-color: var(--ContentBColor);
   margin-top: 10px;
-  overflow: auto;
   display: grid;
+  min-height: max-content;
   grid-template-areas:
-    ". LeninID"
-    "StalinImg StalinID"
-    " . ComradeID";
-  grid-gap: 20px;
-  grid-template-rows: 200px 200px;
+    ". 1id"
+    "2img 2id"
+    " . 3id";
+  grid-gap: 2%;
+  grid-template-rows: auto auto;
+  grid-template-columns: auto auto;
 }
 #LeninID {
-  grid-area: LeninID;
+  grid-area: 1id;
   align-self: center;
 }
 #StalinImg {
-  grid-area: StalinImg;
+  grid-area: 2img;
   width: auto;
   height: 200px;
   justify-self: center;
   align-self: center;
 }
 #StalinID {
-  grid-area: StalinID;
+  grid-area: 2id;
   align-self: center;
 }
 #ComradeID {
-  grid-area: ComradeID;
+  grid-area: 3id;
   align-self: center;
 }
 html.transition,
