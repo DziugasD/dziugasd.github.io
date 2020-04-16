@@ -157,6 +157,7 @@ label:active:after {
   grid-gap: 2%;
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
+  margin-bottom: 10px;
 }
 #LeninID {
   grid-area: 1id;
@@ -183,4 +184,23 @@ html.transition *:before,
 html.transition *:after {
   transition: all 200ms !important;
   transition-delay: 0 !important;
+}
+
+#button {
+  background-color: var(--ContentBColor);
+  width: 100%;
+  color: var(--TColor);
+  text-align: center;
+}
+
+#result {
+  background-color: var(--ContentBColor);
+  color: var(--TColor);
+  width: 100%;
+  text-align: center;
+}
+#calculator {
+  align-self: center;
+  justify-self: center;
+  width: 100%;
 }
