@@ -149,12 +149,11 @@ label:active:after {
   background-color: var(--ContentBColor);
   margin-top: 10px;
   display: grid;
-  min-height: max-content;
   grid-template-areas:
     ". 1id"
     "2img 2id"
     " . 3id";
-  grid-gap: 2%;
+  grid-gap: 10px;
   grid-template-rows: auto auto;
   grid-template-columns: auto auto;
   margin-bottom: 10px;
