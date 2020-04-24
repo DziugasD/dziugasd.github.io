@@ -203,3 +203,19 @@ html.transition *:after {
   justify-self: center;
   width: 100%;
 }
+#tree {
+  position: absolute;
+  mix-blend-mode: lighten;
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+}
+#video {
+  min-width: 100%;
+  position: relative;
+  margin: 10px;
+}
+#sunrise {
+  height: 100%;
+  width: 100%;
+}
