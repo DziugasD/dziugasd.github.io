@@ -91,7 +91,6 @@ label:active:after {
   color: var(--BColor);
   font-size: 1px;
   text-indent: -9999px;
-  position: sticky;
   top: 0;
 }
 
