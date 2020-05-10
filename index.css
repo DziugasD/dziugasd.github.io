@@ -149,12 +149,10 @@ label:active:after {
   margin-top: 10px;
   display: grid;
   grid-template-areas:
-    ". 1id"
+    "woman 1id"
     "2img 2id"
-    " . 3id";
+    "flag 3id";
   grid-gap: 10px;
-  grid-template-rows: auto auto;
-  grid-template-columns: auto auto;
   margin-bottom: 10px;
 }
 #LeninID {
@@ -163,6 +161,20 @@ label:active:after {
 }
 #StalinImg {
   grid-area: 2img;
+  width: auto;
+  height: 200px;
+  justify-self: center;
+  align-self: center;
+}
+#US-FLAG{
+  grid-area: flag;
+  width: auto;
+  height: 200px;
+  justify-self: center;
+  align-self: center;
+}
+#wytas{
+  grid-area: woman;
   width: auto;
   height: 200px;
   justify-self: center;
